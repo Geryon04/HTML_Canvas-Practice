@@ -4,3 +4,5 @@ var pincel = pantalla.getContext("2d");
 pincel.beginPath();
 pincel.moveTo(50, 50);
 pincel.lineTo(50, 400);
+
+pincel.fill();
