@@ -22,7 +22,14 @@ function escribirTexto(x, y, texto){
 }
 
 function dibujarBarra(x, y, serie, colores, texto){
+    escribirTexto(x, y - 10, texto);
+    var sumaAltura = 0; //variable auxiliar
 
+    for(var i = 0; i < serie.length; i++){
+        var altura = serie[i];
+        dibujarRectangulo(x, y + sumaAltura, 50, altura, colores[i]);
+        sumaAltura = sumaAltura + altura;
+    }
 }
 
 dibujarBarra(50, 50, serie2009, colores, "2009");
