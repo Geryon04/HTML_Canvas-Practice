@@ -11,8 +11,13 @@ function dibujarCirculo(x, y, radio, color){
     pincel.fill();
 }
 
-dibujarCirculo(300, 220, 10, "blue");
-dibujarCirculo(300, 200, 10, "red");
-dibujarCirculo(300, 180, 10, "yellow");
-dibujarCirculo(280, 200, 10, "orange");
-dibujarCirculo(320, 200, 10, "black");
+function dibujarFlor() {
+
+    dibujarCirculo(300, 220, 10, "blue");
+    dibujarCirculo(300, 200, 10, "red");
+    dibujarCirculo(300, 180, 10, "yellow");
+    dibujarCirculo(280, 200, 10, "orange");
+    dibujarCirculo(320, 200, 10, "black");
+}
+
+dibujarFlor();
