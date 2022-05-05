@@ -16,4 +16,10 @@ function dibujarCirculo(evento){
     console.log(x + " " + y);
 }
 
+function alterarColor(){
+    alert("funciono");
+    return false;
+}
+
 pantalla.onclick = dibujarCirculo;
+pantalla.oncontextmenu = alterarColor;
