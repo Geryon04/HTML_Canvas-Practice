@@ -20,7 +20,9 @@ function dibujarCirculo(evento){
 
 function alterarColor(){
     indiceColorActual++;
-    alert(indiceColorActual);
+    if(indiceColorActual >= colores.length){
+        indiceColorActual = 0;
+    }
     return false;
 }
 
