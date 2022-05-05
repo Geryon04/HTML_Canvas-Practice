@@ -19,7 +19,8 @@ function dibujarCirculo(evento){
 }
 
 function alterarColor(){
-    alert("funciono");
+    indiceColorActual++;
+    alert(indiceColorActual);
     return false;
 }
 
