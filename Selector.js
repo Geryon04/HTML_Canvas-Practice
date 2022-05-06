@@ -10,3 +10,6 @@ if(selector.value == "grafico"){
 if(selector.value == "bandera"){
     document.write("<script src=\"Bandera.js\"></script>");
 }
+if(selector.value == "bandera"){
+    document.write("<script src=\"Bandera.js\"></script>");
+}
