@@ -31,6 +31,13 @@ function dibujarCuadrado(x, y, tamanio, color){
     pincel.fill();
 }
 
+//Funcion para dibujar la paleta de colores
+function dibujarPaletaColores(){
+    dibujarCuadrado(xRojo, yCuadrados, tamanioCuadrados, "red");
+    dibujarCuadrado(xVerde, yCuadrados, tamanioCuadrados, "green");
+    dibujarCuadrado(xAzul, yCuadrados, tamanioCuadrados, "blue");
+}
+
 function habilitarDibujar(){
     puedoDibujar = true;
 }
