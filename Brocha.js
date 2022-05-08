@@ -1,4 +1,4 @@
-var pantalla = querySelector("canvas");
+var pantalla = document.querySelector("canvas");
 var pincel = pantalla.getContext("2d");
 
 pincel.fillStyle = "grey";
