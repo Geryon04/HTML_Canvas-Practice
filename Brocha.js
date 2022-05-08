@@ -13,10 +13,8 @@ var xAzul = 100;
 var yCuadrados = 0;
 var tamanioCuadrados = 50;
 
-function dibujarCirculo(evento){
+function dibujarCirculo(x, y){
     if(puedoDibujar){
-        var x = evento.pageX - pantalla.offsetLeft;
-        var y = evento.pageY - pantalla.offsetTop;
         pincel.fillStyle = "blue";
         pincel.beginPath();
         pincel.arc(x, y, 5, 0, 2 * Math.PI);
@@ -47,6 +45,26 @@ function deshabilitarDibujar(){
     puedoDibujar = false;
 }
 
+//funcion para delimitar el area
+function puedeDiseniarArea(xCoordenada, yCoordenada){
+    if((xCoordenada >= 0 && (xCoordenada < (3 * tamanioCuadrados + 5)) &&
+     (yCoordenada >= 0 && (yCoordenada < (tamanioCuadrados + 5))))){
+         return false;
+     }
+     else{
+         return true;
+     }
+}
+
+function capturarMovimientoMouse(evento){
+    var x = evento.pageX - pantalla.offsetLeft;
+    var y = evento.pageY - pantalla.offsetTop;
+    if(puedeDiseniarArea(x, y)){
+        dibujarCirculo(x, y);
+    }
+}
+
 pantalla.onmousemove = dibujarCirculo;
 pantalla.onmousedown = habilitarDibujar;
 pantalla.onmouseup = deshabilitarDibujar;
+dibujarPaletaColores();
