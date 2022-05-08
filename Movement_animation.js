@@ -3,6 +3,7 @@ var pincel = pantalla.getContext("2d");
 pincel.fillStyle = "lightgrey";
 pincel.fillRect(0, 0, 600, 400);
 var x = 0;
+var sentido = 1;
 
 function diseniarCircunferencia(x, y, radio){
     pincel.fillStyle = "blue";
@@ -17,8 +18,13 @@ function limpiarPantalla(){
 
 function actualizarPantalla(){
     limpiarPantalla();
+    if(x > 600){
+        sentido = -1;
+    }else if(x < 0){
+        sentido = 1;
+    }
     diseniarCircunferencia(x, 20, 10);
-    x++;
+    x = x + sentido;
 }
 
 setInterval(actualizarPantalla, 100);
