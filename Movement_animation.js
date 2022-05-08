@@ -27,4 +27,4 @@ function actualizarPantalla(){
     x = x + sentido;
 }
 
-setInterval(actualizarPantalla, 100);
+setInterval(actualizarPantalla, 50);
