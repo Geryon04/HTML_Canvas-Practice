@@ -12,10 +12,11 @@ var xVerde = 50;
 var xAzul = 100;
 var yCuadrados = 0;
 var tamanioCuadrados = 50;
+var colorActual = "blue";
 
-function dibujarCirculo(x, y){
+function dibujarCirculo(x, y, colorActual){
     if(puedoDibujar){
-        pincel.fillStyle = "blue";
+        pincel.fillStyle = colorActual;
         pincel.beginPath();
         pincel.arc(x, y, 5, 0, 2 * Math.PI);
         pincel.fill();
@@ -60,11 +61,31 @@ function capturarMovimientoMouse(evento){
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
     if(puedeDiseniarArea(x, y)){
-        dibujarCirculo(x, y);
+        dibujarCirculo(x, y, colorActual);
     }
 }
 
-pantalla.onmousemove = dibujarCirculo;
+function seleccionarColor(evento){
+    var x = evento.pageX - pantalla.offsetLeft;
+    var y = evento.pageY - pantalla.offsetTop;
+
+    //cada condicion altera el color de la variable colorActual
+    //Comenzamos por la condicion del eje y que es comun para todas 
+    if(y > yCuadrados && y < (yCuadrados + tamanioCuadrados)){
+        if(x > xRojo && x < (xRojo + tamanioCuadrados)){
+            colorActual = "red";
+            console.log(colorActual);
+        }else if(x > xVerde && x < (xVerde + tamanioCuadrados)){
+            colorActual = "green";
+            console.log(colorActual);
+        }else if(x > xAzul && (x < xAzul + tamanioCuadrados)){
+            colorActual = "blue";
+            console.log(colorActual);
+        }
+    }
+}
+pantalla.onmousemove = capturarMovimientoMouse;
 pantalla.onmousedown = habilitarDibujar;
 pantalla.onmouseup = deshabilitarDibujar;
 dibujarPaletaColores();
+pantalla.onclick = seleccionarColor;
