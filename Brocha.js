@@ -12,7 +12,7 @@ var xVerde = 50;
 var xAzul = 100;
 var yCuadrados = 0;
 var tamanioCuadrados = 50;
-var colorActual = "blue";
+var colorActual = "red;
 
 function dibujarCirculo(x, y, colorActual){
     if(puedoDibujar){
