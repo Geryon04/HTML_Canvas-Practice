@@ -1,7 +1,7 @@
 var selector = document.querySelector("input");
 
-if(selector.value == "escuadra"){
-    document.write("<script src=\"Escuadra.js\"></script>");
+if(selector.value == "point"){
+    document.write("<script src=\"Point_Draw.js\"></script>");
 }
 
 if(selector.value == "brocha"){
