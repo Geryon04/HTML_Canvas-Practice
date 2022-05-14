@@ -3,6 +3,11 @@ var pincel = pantalla.getContext("2d");
 pantalla.clear();
 
 
+pincel.fillStyle = "grey";
+pincel.fillRect(0, 0, 100, 100);
+
+
+
 
 
 
