@@ -11,6 +11,7 @@ function ingresarComando() {
 }
 
 function cambiarPantalla() {
+    comando = selector.value;
     if (comando == "brocha") {
         document.write("<script src=\"Brocha.js\"></script>");
 
