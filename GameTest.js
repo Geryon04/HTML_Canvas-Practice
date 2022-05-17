@@ -9,4 +9,5 @@ pincel.fillRect(0, 0, 600, 400);
 pincel.fillStyle = "rgb(0, 0, 0)";
 pincel.fillRect(0, 350, 600, 50);
 
-
+//plataform test
+pincel.fillRect(200, 250, 100, 30);
