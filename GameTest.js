@@ -11,3 +11,16 @@ pincel.fillRect(0, 350, 600, 50);
 
 //plataform test
 pincel.fillRect(200, 250, 100, 30);
+
+//Character test
+pincel.beginPath()
+pincel.arc(20, 300, 20, 0, 2 * Math.PI);
+pincel.fill();
+
+//character movement
+function movement(evento){
+    var x = evento.pageX - pantalla.offsetLeft;
+    var y = evento.pageY - pantalla.offsetTop;
+}
+
+
