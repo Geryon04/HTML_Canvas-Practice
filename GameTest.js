@@ -17,6 +17,11 @@ pincel.beginPath()
 pincel.arc(20, 300, 20, 0, 2 * Math.PI);
 pincel.fill();
 
+//update screen
+function clearScreen(){
+    pincel.clearRect(0, 0, 600, 400);
+}
+
 //character movement
 function movement(evento){
     var x = evento.pageX - pantalla.offsetLeft;
