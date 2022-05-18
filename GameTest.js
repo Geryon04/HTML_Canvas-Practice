@@ -17,6 +17,10 @@ pincel.beginPath()
 pincel.arc(20, 300, 20, 0, 2 * Math.PI);
 pincel.fill();
 
+//position
+var posX = 0;
+var posY = 50;
+
 //update screen
 function clearScreen(){
     pincel.clearRect(0, 0, 600, 400);
