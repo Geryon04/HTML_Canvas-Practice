@@ -27,7 +27,7 @@ function clearScreen(){
 }
 
 //character movement
-function movement(evento){
+function movement(evento, x, y){
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
 }
