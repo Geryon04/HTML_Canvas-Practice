@@ -12,6 +12,12 @@ pincel.fillRect(0, 350, 600, 50);
 //plataform test
 pincel.fillRect(200, 250, 100, 30);
 
+//arrow key codes
+var UP = 38;
+var DOWN = 40;
+var RIGHT = 39;
+var LEFT = 37;
+
 //Character test
 function character(x, y) {
     pincel.beginPath()
@@ -30,9 +36,13 @@ function clearScreen() {
 }
 
 //character movement
-function movement(evento, x, y) {
+function movement(evento) {
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
+    if(evento.keyCode == RIGHT){
+        character(x+10, y);
+        clearScreen();
+    }
 }
 
-
+movement();
