@@ -37,12 +37,15 @@ function clearScreen() {
 
 //character movement
 function movement(evento, pX, pY) {
+    clearScreen();
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
     if(evento.keyCode == RIGHT){
-        character(x+pX, y+pY);
-        clearScreen();
+        x = x +10;
+        y = y + 10;
+        
     }
+    character(x+pX, y+pY);
 }
+setInterval(movement(posX, posY), 50);
 
-movement(posX, posY);
