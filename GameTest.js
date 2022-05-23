@@ -36,13 +36,13 @@ function clearScreen() {
 }
 
 //character movement
-function movement(evento) {
+function movement(evento, pX, pY) {
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
     if(evento.keyCode == RIGHT){
-        character(x+10, y);
+        character(x+pX, y+pY);
         clearScreen();
     }
 }
 
-movement();
+movement(posX, posY);
