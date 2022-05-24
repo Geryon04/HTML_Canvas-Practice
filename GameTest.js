@@ -36,8 +36,8 @@ function clearScreen() {
 }
 
 //character movement
-function movement(evento, pX, pY) {
-    clearScreen();
+function movement(evento) {
+    //clearScreen();
     var x = evento.pageX - pantalla.offsetLeft;
     var y = evento.pageY - pantalla.offsetTop;
     if(evento.keyCode == RIGHT){
@@ -45,7 +45,8 @@ function movement(evento, pX, pY) {
         y = y + 10;
         
     }
-    character(x+pX, y+pY);
+    console.log(evento.keyCode);
+    character(posX + x, posY + y);
 }
-setInterval(movement(posX, posY), 50);
+setInterval(movement(), 50);
 
