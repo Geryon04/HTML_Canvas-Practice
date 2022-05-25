@@ -18,6 +18,10 @@ var DOWN = 40;
 var RIGHT = 39;
 var LEFT = 37;
 
+//position
+var posX = 0;
+var posY = 150;
+
 //Character test
 function character(x, y) {
     pincel.beginPath()
@@ -25,28 +29,17 @@ function character(x, y) {
     pincel.fill();
 }
 
-
-//position
-var posX = 0;
-var posY = 50;
-
 //update screen
 function clearScreen() {
     pincel.clearRect(0, 0, 600, 400);
 }
 
 //character movement
-function movement(evento) {
-    //clearScreen();
-    var x = evento.pageX - pantalla.offsetLeft;
-    var y = evento.pageY - pantalla.offsetTop;
-    if(evento.keyCode == RIGHT){
-        x = x +10;
-        y = y + 10;
-        
+function movement(x, y) {
+    while(x <= 300){
+        x = x + 5;
     }
-    console.log(evento.keyCode);
-    character(posX + x, posY + y);
+    character(x, y);
 }
-setInterval(movement(), 50);
+setInterval(movement(posX, posY), 50);
 
