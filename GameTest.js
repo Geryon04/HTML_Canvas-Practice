@@ -40,7 +40,6 @@ function clearScreen() {
 //character movement
 function movement() {
     clearScreen();
-    var d = new Date();
     if (posX <= 400) {
         character(posX, posY);
         posX = posX + 1;
