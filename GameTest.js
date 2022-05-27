@@ -40,9 +40,13 @@ function clearScreen() {
 //character movement
 function movement() {
     clearScreen();
-    if (posX <= 400) {
+    if (posX <= 500) {
         character(posX, posY);
         posX = posX + 1;
+        console.log(posX + " " + posY);
+    }else if(posX == 500 && posY > 20){
+        character(posX, posY);
+        posY = posY - 1;
         console.log(posX + " " + posY);
     }
 }
